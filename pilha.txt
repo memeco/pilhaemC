@@ -1,0 +1,34 @@
+Explicação do código:
+
+#1 Inclusões de bibliotecas:
+As bibliotecas stdio.h, stdlib.h e string.h são incluídas.
+stdio.h é necessária para entrada e saída padrão, stdlib.h é necessária 
+para alocação de memória dinâmica, e string.h é necessária para manipulação de strings.
+
+#2 Definição de Constantes:
+É definida a constante MAX_TAM com valor 5,
+que representa o tamanho máximo da pilha de livros.
+
+#3 Definição da Estrutura de Dados PilhaLivros:
+Uma estrutura PilhaLivros é definida, 
+que contém um array bidimensional de caracteres livros e um inteiro topo.
+
+#4Inicialização da Pilha:
+A função inicializarPilha é definida para inicializar a pilha.
+O topo da pilha é definido como -1, indicando que a pilha está vazia.
+
+#5 Empilhamento de Livros:
+A função empilharLivro é definida para empilhar um livro na pilha.
+Se a pilha estiver cheia (ou seja, o topo for igual a MAX_TAM - 1), uma
+mensagem de erro é exibida. Caso contrário, o topo é incrementado e o nome
+do livro é copiado para o topo da pilha.
+
+#6 Função Principal (main):
+Na função principal main(), uma variável pilha do tipo PilhaLivros é declarada
+e inicializada chamando inicializarPilha(&pilha). Em seguida, os livros são empilhados
+na ordem fornecida ("Livro A", "Livro B", etc.) usando a 
+função empilharLivro(&pilha, "nome_do_livro").
+
+#6 Exibição dos Livros Empilhados:
+Após empilhar os livros, a função printf é usada para exibir os livros empilhados,
+percorrendo o array de livros na pilha até o topo.
