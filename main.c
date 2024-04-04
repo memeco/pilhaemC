@@ -25,6 +25,7 @@ void empilharLivro(PilhaLivros *pilha, char *livro) {
     strcpy(pilha->livros[pilha->topo], livro); // Copia o livro para o topo da pilha
 }
 
+// Função para desempilhar um livro
 void desempilharLivro(PilhaLivros *pilha) {
     // Verifica se a pilha está vazia
     if (pilha->topo == -1) { 
@@ -32,7 +33,7 @@ void desempilharLivro(PilhaLivros *pilha) {
         return;
     }
     // Mostra o livro a ser removido
-    printf("Livro removido: %s", pilha->livros[pilha=>top0]);
+    printf("Livro removido: %s\n", pilha->livros[pilha->topo]);
     // Decrementa o topo
     pilha->topo--; 
 }
@@ -42,6 +43,7 @@ int main() {
     PilhaLivros pilha;
     inicializarPilha(&pilha);
 
+    // Desempilhando um livro (pilha vazia)
     desempilharLivro(&pilha);
 
     // Empilhando os livros fornecidos
@@ -57,7 +59,9 @@ int main() {
         printf("%s\n", pilha.livros[i]);
     }
 
-    desempilharLivro(&pilha, "Livro E");
+    // Desempilhando um livro
+    desempilharLivro(&pilha);
+
     // Exibindo os livros empilhados após a remoção (opcional)
     printf("Livros empilhados após a remoção:\n");
     for (int i = pilha.topo; i >= 0;  i--) {
